@@ -1,0 +1,7 @@
+{
+  "name": "exportFile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
