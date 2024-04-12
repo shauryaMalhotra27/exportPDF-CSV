@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Confirm Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-text class="text"
+        >First Name : {{receivedData.firstNameInfo}}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text class="text"
+        >Last Name : {{receivedData.lastNameInfo}}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text class="text">
+        User Name : {{receivedData.usernameInfo}}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text class="text">Email : {{receivedData.emailInfo}} </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text class="text">Gender : {{receivedData.genderInfo}} </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-text class="text">Hobbies : {{receivedData.hobbiesInfo}} </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <div class="center">
+    <ion-text *ngIf="!btnSwitch" class="buttonViewResult" (click)="createPdf()"
+      >Create Pdf</ion-text
+    >
+    <ion-text *ngIf="btnSwitch" class="buttonViewResult" (click)="downloadPdf()"
+      >Download Pdf</ion-text
+    >
+    <ion-text *ngIf="btnSwitch" class="buttonViewResult" (click)="downloadCsv()"
+      >Download Csv</ion-text
+    >
+  </div>
+</ion-content>

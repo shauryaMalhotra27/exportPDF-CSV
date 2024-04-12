@@ -11,6 +11,15 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'view-pdf',
+    loadChildren: () => import('./view-pdf/view-pdf.module').then( m => m.ViewPdfPageModule)
+  },
+  {
+    path: 'enter-pdf-detail',
+    loadChildren: () => import('./enter-pdf-detail/enter-pdf-detail.module').then( m => m.EnterPdfDetailPageModule)
+  },
+
 ];
 
 @NgModule({
